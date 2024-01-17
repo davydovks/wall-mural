@@ -1,2 +1,2 @@
 import './bootstrap';
-import './quiz1';
+import './quiz';
