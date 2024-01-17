@@ -8,7 +8,7 @@
         фотообоев в своем интерьере. Прикрепи фото стены и мы сделаем тебе
         подборку подходящих сюжетов.
     </p>
-    <a href="#" class="home__link">
+    <a href="/quiz1" class="home__link">
         <div class="home__button">Получить визуализацию</div>
     </a>
     <div class="home__ad">
