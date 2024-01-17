@@ -74,7 +74,7 @@
 }
 
 .quiz {
-    padding: 70px 200px;
+    padding: 100px 300px;
 }
 
 .quiz__header {
@@ -93,7 +93,7 @@
 .quiz__img {
     position: absolute;
     right: 0;
-    top: -100px;
+    top: -120px;
     width: 100%;
     z-index: -1;
 }
