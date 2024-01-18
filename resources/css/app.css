@@ -190,7 +190,7 @@
 
 .quiz__card-image.selected, .quiz__card-image:hover {
     cursor: pointer;
-    border: 4px solid #AE0B0B;
+    outline: 4px solid #AE0B0B;
 } */
 
 .quiz__card-image::after {
