@@ -1,14 +1,29 @@
 let cards = document.querySelectorAll('.card__top');
+let button = document.querySelector('.quiz__button');
 
 cards.forEach(card => {
     card.addEventListener('click', function() {
         if (!card.classList.contains("selected")) {
             cards.forEach((card) => card.classList.remove("selected"));
-            document.querySelector('.quiz__button').removeAttribute("disabled");
+            button.removeAttribute("disabled");
             card.classList.toggle("selected");
         } else {
             card.classList.toggle("selected");
-            document.querySelector('.quiz__button').setAttribute("disabled", "disabled");
+            button.setAttribute("disabled", "disabled");
         }
     });
+});
+
+button.addEventListener('click', function() {
+    if (!button.hasAttribute("disabled")) {
+        let url = new URL(window.location.href);
+        let selected = '';
+        cards.forEach(function(card, key) {
+            if (card.classList.contains("selected")) {
+                selected = key;
+            }
+        });
+        let cookie = url.pathname + '=' + selected;
+        document.cookie = cookie;
+    }
 });
