@@ -24,3 +24,7 @@ Route::get('/quiz1', function() {
 Route::get('/quiz4', function() {
     return view('quiz4');
 });
+
+Route::get('/request', function() {
+    return view('request');
+});
