@@ -47,6 +47,7 @@
     padding: 30px 40px;
     border-radius: 10px;
     background: linear-gradient(180deg, #AE0B0B 0%, #7D0808 100%);
+    box-shadow: 0 4px 0 #944444;
 }
 
 .home__link {
