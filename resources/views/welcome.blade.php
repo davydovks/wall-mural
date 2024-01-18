@@ -9,9 +9,9 @@
         подборку подходящих сюжетов.
     </p>
     <button class="form__button" onclick="location.href='/quiz1'">Получить визуализацию</button>
-    <div class="home__ad">
-        <img src="{{ Vite::asset('/resources/images/pc.svg') }}" alt="img" class="home__pc">
-        <p class="home__ad-text">
+    <div class="adv">
+        <img src="{{ Vite::asset('/resources/images/pc.svg') }}" alt="img" class="adv__image">
+        <p class="adv__text">
             Бесплатная коррекция цвета и элементов и отрисовка по вашим пожеланиям
         </p>
     </div>
