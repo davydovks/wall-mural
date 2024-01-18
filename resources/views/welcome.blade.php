@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="bg-black home">
-    <img src="{{ Vite::asset('/resources/images/background.jpg') }}" alt="img" class="home__img">
+    <div class="home__img"></div>
     <h1 class="home__h1 h1">Примерь фотообои<br>на свою стену</h1>
     <p class="home__text">Ответь на несколько вопросов и получи бесплатную визуализацию
         фотообоев в своем интерьере. Прикрепи фото стены и мы сделаем тебе

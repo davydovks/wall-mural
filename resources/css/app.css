@@ -16,6 +16,19 @@
     padding: 150px;
 }
 
+.home__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+	height: 100%;
+	background:
+		linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+		url('/resources/images/background.jpg');
+	background-size: cover;
+    z-index: -1;
+}
+
 .home__h1 {
     font-size: 84px;
     font-weight: bold;
@@ -26,15 +39,6 @@
     font-size: 24px;
     margin-top: 50px;
     width: 870px;
-}
-
-.home__img {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 70%;
-    height: 100vh;
-    z-index: -1;
 }
 
 .home__button {
