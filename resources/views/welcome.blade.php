@@ -8,9 +8,7 @@
         фотообоев в своем интерьере. Прикрепи фото стены и мы сделаем тебе
         подборку подходящих сюжетов.
     </p>
-    <a href="/quiz1" class="home__link">
-        <div class="home__button">Получить визуализацию</div>
-    </a>
+    <button class="form__button" onclick="location.href='/quiz1'">Получить визуализацию</button>
     <div class="home__ad">
         <img src="{{ Vite::asset('/resources/images/pc.svg') }}" alt="img" class="home__pc">
         <p class="home__ad-text">

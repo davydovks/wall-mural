@@ -41,21 +41,16 @@
     width: 870px;
 }
 
-.home__button {
-    width: max-content;
+.form__button {
     margin-top: 70px;
     padding: 30px 40px;
     border-radius: 10px;
+    border: none;
     background: linear-gradient(180deg, #AE0B0B 0%, #7D0808 100%);
     box-shadow: 0 4px 0 #944444;
-}
-
-.home__link {
-    display: inline-block;
-    text-decoration: none;
     font-size: 34px;
     font-weight: 700;
-    letter-spacing: 0.34px;
+    cursor: pointer;
 }
 
 .home__ad {
