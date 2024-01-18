@@ -1,14 +1,14 @@
-let images = document.querySelectorAll('.card__image');
+let cards = document.querySelectorAll('.card__top');
 
-images.forEach(image => {
-    image.addEventListener('click', function() {
-        if (!image.parentElement.classList.contains("selected")) {
-            images.forEach((img) => img.parentElement.classList.remove("selected"));
-            document.querySelector('.quiz__button').classList.add("active");
-            image.parentElement.classList.toggle("selected");
+cards.forEach(card => {
+    card.addEventListener('click', function() {
+        if (!card.classList.contains("selected")) {
+            cards.forEach((card) => card.classList.remove("selected"));
+            document.querySelector('.quiz__button').removeAttribute("disabled");
+            card.classList.toggle("selected");
         } else {
-            document.querySelector('.quiz__button').classList.remove("active");
-            image.parentElement.classList.toggle("selected");
+            card.classList.toggle("selected");
+            document.querySelector('.quiz__button').setAttribute("disabled", "disabled");
         }
     });
 });

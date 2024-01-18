@@ -159,19 +159,17 @@
     width: max-content;
     margin: 5px auto 0;
     padding: 12px 30px;
+    border: none;
     border-radius: 10px;
-    background: #ACACAC;
-    position: relative;
-}
-
-.quiz__button.active {
     background: #7D0808;
-}
-
-.quiz__link {
+    position: relative;
     text-decoration: none;
     font-size: 18px;
     font-weight: 700;
+}
+
+.quiz__button[disabled] {
+    background: #ACACAC;
 }
 
 .cards {
