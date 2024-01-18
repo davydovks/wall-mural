@@ -26,9 +26,7 @@
                     </div>
                 @endforeach
             </div>
-            <form action="@yield('next')" method="POST">
-                <input type="submit" value="Далее" class="quiz__button" disabled>
-            </form>
+            <button class="quiz__button" onclick="location.href='@yield('next')'" disabled>Далее</button>
         </div>
     </div>
 </div>
