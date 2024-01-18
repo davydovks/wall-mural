@@ -14,16 +14,18 @@ cards.forEach(card => {
     });
 });
 
-button.addEventListener('click', function() {
-    if (!button.hasAttribute("disabled")) {
-        let url = new URL(window.location.href);
-        let selected = '';
-        cards.forEach(function(card, key) {
-            if (card.classList.contains("selected")) {
-                selected = key;
-            }
-        });
-        let cookie = url.pathname + '=' + selected;
-        document.cookie = cookie;
-    }
-});
+if (button) {
+    button.addEventListener('click', function() {
+        if (!button.hasAttribute("disabled")) {
+            let url = new URL(window.location.href);
+            let selected = '';
+            cards.forEach(function(card, key) {
+                if (card.classList.contains("selected")) {
+                    selected = key;
+                }
+            });
+            let cookie = url.pathname + '=' + selected;
+            document.cookie = cookie;
+        }
+    });
+}
