@@ -162,6 +162,7 @@
     border: none;
     border-radius: 10px;
     background: #7D0808;
+    cursor: pointer;
     position: relative;
     text-decoration: none;
     font-size: 18px;
@@ -170,6 +171,7 @@
 
 .quiz__button[disabled] {
     background: #ACACAC;
+    cursor: auto;
 }
 
 .cards {
