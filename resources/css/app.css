@@ -50,6 +50,7 @@
 }
 
 .home__link {
+    display: inline-block;
     text-decoration: none;
     font-size: 34px;
     font-weight: 700;
