@@ -3,9 +3,10 @@
 @section('question', 'В какую комнату планируете фотообои?')
 @section('progress', '25')
 @section('next', '/quiz4')
+@section('cardsPerRow', '4')
 
 @php
-    $rooms = [
+    $cards = [
         [
             'name' => 'Гостиная',
             'link' => '/resources/images/rooms/room1.png'
@@ -40,19 +41,3 @@
         ],
     ];
 @endphp
-
-@section('quiz_container')
-    <div class="cards cards-row-4">
-        @foreach ($rooms as $room)
-            <div class="card">
-                <div class="card__top">
-                    <img src="{{ Vite::asset($room['link']) }}" alt="{{ $room['name'] }}" class="card__image">
-                </div>
-                <div class="card__circle"></div>
-                <div class="card__bottom">
-                    <div class="card__title">{{ $room['name'] }}</div>
-                </div>
-            </div>
-        @endforeach
-    </div>
-@endsection

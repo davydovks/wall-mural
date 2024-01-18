@@ -13,7 +13,19 @@
         </div>
         <div class="quiz1__inner">
             <h3 class="quiz__question">@yield('question')</h3>
-            @yield('quiz_container')
+            <div class="cards cards-row-@yield('cardsPerRow')">
+                @foreach ($cards as $card)
+                    <div class="card">
+                        <div class="card__top">
+                            <img src="{{ Vite::asset($card['link']) }}" alt="{{ $card['name'] }}" class="card__image">
+                        </div>
+                        <div class="card__circle"></div>
+                        <div class="card__bottom">
+                            <div class="card__title">{{ $card['name'] }}</div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
             <a href="@yield('next')" class="quiz__link">
                 <div class="quiz__button">Далее</div>
             </a>
