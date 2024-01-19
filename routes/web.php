@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InquiryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/quiz1', function () {
     return view('quiz1');
@@ -28,3 +29,6 @@ Route::get('/quiz4', function () {
 Route::get('/request', function () {
     return view('request');
 });
+
+Route::post('/request', [InquiryController::class, 'store'])
+    ->name('inquiries.store');
