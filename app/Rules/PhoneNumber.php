@@ -16,7 +16,7 @@ class PhoneNumber implements ValidationRule
     {
         $pattern = '/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{6,10}$/';
         if (!preg_match($pattern, $value)) {
-            $fail('Укажите корректный номер телефона');
+            $fail(__('validation.phone'));
         }
     }
 }
