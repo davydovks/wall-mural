@@ -26,9 +26,7 @@
                     визуализаций по вашим пожеланиям<br>
                     в WhatsApp или Viber
                 </div>
-                <form method="dialog">
-                    <button class="modal__button">Буду ждать</button>
-                </form>
+                <button class="modal__button">Буду ждать</button>
             </div>
         </div>
     </div>
