@@ -317,3 +317,50 @@ input:-webkit-autofill {
 .alert-danger {
     color: red;
 }
+
+.modal__overlay {
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -125px;
+}
+
+.modal__container {
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 500px;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__text {
+    color: #333;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal__button {
+    margin-top: 30px;
+    background-color: #7D0808;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}

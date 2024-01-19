@@ -16,4 +16,21 @@
         </p>
     </div>
 </div>
+@if (session()->has('modal'))
+    <div class="modal__overlay">
+        <div class="modal">
+            <div class="modal__container">
+                <div class="modal__text">
+                    Мы обработаем вашу заявку<br>
+                    в ближайшее время и пришлём подборку<br>
+                    визуализаций по вашим пожеланиям<br>
+                    в WhatsApp или Viber
+                </div>
+                <form method="dialog">
+                    <button class="modal__button">Буду ждать</button>
+                </form>
+            </div>
+        </div>
+    </div>
+@endif
 @endsection

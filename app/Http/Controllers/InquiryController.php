@@ -57,6 +57,6 @@ class InquiryController extends Controller
         $inquiry->position_id = $request->session()->get('position');
         $inquiry->save();
 
-        return redirect()->route('home');
+        return redirect()->route('home')->with('modal','true');
     }
 }
