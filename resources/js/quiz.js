@@ -2,7 +2,7 @@ let cards = document.querySelectorAll('.card__top');
 let button = document.querySelector('.quiz__button');
 
 cards.forEach(card => {
-    card.addEventListener('click', function() {
+    card.addEventListener('click', function () {
         if (!card.classList.contains("selected")) {
             cards.forEach((card) => card.classList.remove("selected"));
             button.removeAttribute("disabled");
@@ -15,11 +15,11 @@ cards.forEach(card => {
 });
 
 if (button) {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         if (!button.hasAttribute("disabled")) {
             let url = new URL(window.location.href);
             let selected = '';
-            cards.forEach(function(card, key) {
+            cards.forEach(function (card, key) {
                 if (card.classList.contains("selected")) {
                     selected = key;
                 }
