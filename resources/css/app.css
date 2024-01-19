@@ -133,18 +133,11 @@
     border-radius: 10px 10px 0 0;
 }
 
-.quiz1__inner {
+.quiz__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px 40px 40px;
-}
-
-.quiz4__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px 300px 40px;
 }
 
 .quiz__question {

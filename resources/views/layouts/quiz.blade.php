@@ -11,7 +11,7 @@
         <div class="progress" role="progressbar" aria-label="Progress bar" aria-valuenow="@yield('progress')" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
             <div class="progress-bar w-@yield('progress')"></div>
         </div>
-        <form action="@yield('action')" method="post" class="quiz1__inner">
+        <form action="@yield('action')" method="post" class="quiz__inner">
             {{ csrf_field() }}
             <h3 class="quiz__question">@yield('question')</h3>
             <div class="cards cards-row-@yield('cardsPerRow')">
