@@ -20,9 +20,7 @@
                             <img src="{{ Vite::asset($card['link']) }}" alt="{{ $card['name'] }}" class="card__image">
                         </div>
                         <div class="card__circle"></div>
-                        <div class="card__bottom">
-                            <div class="card__title">{{ $card['name'] }}</div>
-                        </div>
+                        <div class="card__title">{{ $card['name'] }}</div>
                     </div>
                 @endforeach
             </div>
