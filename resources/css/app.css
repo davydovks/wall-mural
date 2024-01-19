@@ -313,3 +313,7 @@ input:-webkit-autofill {
 .form__file:active span {
     background-color: #2b5d63;
 }
+
+.alert-danger {
+    color: red;
+}

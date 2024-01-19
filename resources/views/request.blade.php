@@ -10,8 +10,14 @@
     </p>
     <form action="/request" method="post">
         {{ csrf_field() }}
-        <input type="text" name="firstname" class="form__input" placeholder="Введите имя"><br>
-        <input type="text" name="phone" class="form__input" placeholder="Номер телефона"><br>
+        <input type="text" name="firstname" class="form__input" placeholder="Введите имя" value="{{ old('firstname') }}"><br>
+        @error('firstname')
+            <div class="alert-danger">{{ $message }}</div>
+        @enderror
+        <input type="text" name="phone" class="form__input" placeholder="Номер телефона" value="{{ old('phone') }}"><br>
+        @error('phone')
+            <div class="alert-danger">{{ $message }}</div>
+        @enderror
         <label class="form__file">
             <input type="file" name="file">
             <span>Выберите файл</span>
