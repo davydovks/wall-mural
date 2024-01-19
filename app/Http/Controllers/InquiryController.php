@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inquiry;
+use App\Rules\PhoneNumber;
 use Illuminate\Http\Request;
 
 class InquiryController extends Controller
@@ -48,7 +49,7 @@ class InquiryController extends Controller
     {
         $data = $this->validate($request, [
             'firstname' => 'required|string',
-            'phone' => 'required',
+            'phone' => ['required', new PhoneNumber],
         ]);
 
         $inquiry = new Inquiry($data);
