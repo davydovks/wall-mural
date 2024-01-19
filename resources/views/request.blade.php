@@ -9,6 +9,7 @@
         подборку на твою стену и отправим результат на WhatsApp или Viber.
     </p>
     <form action="/request" method="post">
+        {{ csrf_field() }}
         <input type="text" name="firstname" class="form__input" placeholder="Введите имя"><br>
         <input type="text" name="phone" class="form__input" placeholder="Номер телефона"><br>
         <label class="form__file">
