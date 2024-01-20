@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inquiry;
+use App\Models\Position;
+use App\Models\Room;
 use App\Rules\PhoneNumber;
 use App\Traits\Upload;
 use Illuminate\Http\Request;
@@ -31,8 +33,10 @@ class InquiryController extends Controller
         ]);
 
         $inquiry = new Inquiry($data);
-        $inquiry->room_id = $request->session()->get('room');
-        $inquiry->position_id = $request->session()->get('position');
+        $room = Room::find($request->session()->get('room'));
+        $position = Position::find($request->session()->get('position'));
+        $inquiry->room()->associate($room);
+        $inquiry->position()->associate($position);
         if ($request->hasFile('file')) {
             $path = $this->uploadFile($request->file('file'), 'UserPhoto');
             $inquiry->file = $path;
