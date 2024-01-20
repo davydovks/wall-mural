@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InquiryController;
+use App\Http\Controllers\PositionController;
 use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,11 +26,11 @@ Route::get('/quiz1', [RoomController::class, 'create'])
 Route::post('/quiz1', [RoomController::class, 'store'])
     ->name('quiz1.store');
 
-Route::get('/quiz4', [InquiryController::class, 'createStep4'])
-    ->name('inquiries.create4');
+Route::get('/quiz4', [PositionController::class, 'create'])
+    ->name('quiz4.create');
 
-Route::post('/quiz4', [InquiryController::class, 'storeStep4'])
-    ->name('inquiries.store4');
+Route::post('/quiz4', [PositionController::class, 'store'])
+    ->name('quiz4.store');
 
 Route::get('/request', [InquiryController::class, 'create'])
     ->name('inquiries.create');

@@ -21,6 +21,6 @@ class RoomController extends Controller
 
         $request->session()->put('room', $data['room']);
 
-        return redirect()->route('inquiries.create4');
+        return redirect()->route('quiz4.create');
     }
 }
