@@ -23,6 +23,9 @@
             <input type="file" name="file" accept="image/*">
             <span>Выберите файл</span>
         </label><br>
+        @error('file')
+            <div class="alert-danger">{{ $message }}</div>
+        @enderror
         <input type="submit" value="Получить визуализацию" class="form__button">
     </form>
 </div>
