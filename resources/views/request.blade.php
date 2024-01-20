@@ -18,7 +18,7 @@
         @error('phone')
             <div class="alert-danger">{{ $message }}</div>
         @enderror
-        <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+        <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
         <label class="form__file">
             <input type="file" name="file" accept="image/*">
             <span>Выберите файл</span>
