@@ -17,13 +17,13 @@
             <div class="cards cards-row-@yield('cardsPerRow')">
                 @foreach ($cards as $card)
                     <label>
-                        <input type="radio" name="@yield('name')" value="{{ $loop->iteration }}" class="card__radio">
+                        <input type="radio" name="@yield('name')" value="{{ $card->id }}" class="card__radio">
                         <div class="card">
                             <div class="card__top">
-                                <img src="{{ Vite::asset($card['link']) }}" alt="{{ $card['name'] }}" class="card__image">
+                                <img src="{{ Vite::asset($card->link) }}" alt="{{ $card->name }}" class="card__image">
                             </div>
                             <div class="card__circle"></div>
-                            <div class="card__title">{{ $card['name'] }}</div>
+                            <div class="card__title">{{ $card->name }}</div>
                         </div>
                     </label>
                 @endforeach
