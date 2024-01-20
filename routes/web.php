@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InquiryController;
+use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,11 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/quiz1', [InquiryController::class, 'createStep1'])
-    ->name('inquiries.create1');
+Route::get('/quiz1', [RoomController::class, 'create'])
+    ->name('quiz1.create');
 
-Route::post('/quiz1', [InquiryController::class, 'storeStep1'])
-    ->name('inquiries.store1');
+Route::post('/quiz1', [RoomController::class, 'store'])
+    ->name('quiz1.store');
 
 Route::get('/quiz4', [InquiryController::class, 'createStep4'])
     ->name('inquiries.create4');

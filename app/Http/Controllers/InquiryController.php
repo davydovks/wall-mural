@@ -12,22 +12,6 @@ class InquiryController extends Controller
 {
     use Upload;
 
-    public function createStep1()
-    {
-        return view('quiz1');
-    }
-
-    public function storeStep1(Request $request)
-    {
-        $data = $request->validate([
-            'room' => 'required'
-        ]);
-
-        $request->session()->put('room', $data['room']);
-
-        return redirect()->route('inquiries.create4');
-    }
-
     public function createStep4(Request $request)
     {
         if (empty($request->session()->get('room'))) {
