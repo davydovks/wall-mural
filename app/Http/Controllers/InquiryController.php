@@ -63,7 +63,7 @@ class InquiryController extends Controller
         $data = $this->validate($request, [
             'firstname' => 'required|string',
             'phone' => ['required', new PhoneNumber()],
-            'file' => 'required',
+            'file' => 'required|image|max:20000',
         ]);
 
         $inquiry = new Inquiry($data);
