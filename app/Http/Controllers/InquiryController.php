@@ -15,7 +15,7 @@ class InquiryController extends Controller
     public function createStep4(Request $request)
     {
         if (empty($request->session()->get('room'))) {
-            return redirect()->route('inquiries.create1');
+            return redirect()->route('quiz1.create');
         }
         return view('quiz4');
     }
@@ -34,7 +34,7 @@ class InquiryController extends Controller
     public function create(Request $request)
     {
         if (empty($request->session()->get('room'))) {
-            return redirect()->route('inquiries.create1');
+            return redirect()->route('quiz1.create');
         }
         if (empty($request->session()->get('position'))) {
             return redirect()->route('inquiries.create4');
