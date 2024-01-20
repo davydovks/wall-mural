@@ -19,4 +19,9 @@ class Inquiry extends Model
     {
         return $this->belongsTo(Room::class);
     }
+
+    public function position()
+    {
+        return $this->belongsTo(Position::class);
+    }
 }
