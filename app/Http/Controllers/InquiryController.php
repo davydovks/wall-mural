@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\File;
 use App\Models\Inquiry;
 use App\Rules\PhoneNumber;
 use App\Traits\Upload;
