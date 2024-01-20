@@ -62,7 +62,7 @@ class InquiryController extends Controller
     {
         $data = $this->validate($request, [
             'firstname' => 'required|string',
-            'phone' => ['required', new PhoneNumber],
+            'phone' => ['required', new PhoneNumber()],
             'file' => 'required',
         ]);
 
@@ -75,6 +75,6 @@ class InquiryController extends Controller
         }
         $inquiry->save();
 
-        return redirect()->route('home')->with('modal','true');
+        return redirect()->route('home')->with('modal', 'true');
     }
 }
