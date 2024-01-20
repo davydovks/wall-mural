@@ -14,4 +14,9 @@ class Inquiry extends Model
         'phone',
         'file'
     ];
+
+    public function room()
+    {
+        return $this->belongsTo(Room::class);
+    }
 }
