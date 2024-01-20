@@ -8,7 +8,7 @@
         телефона и жми «Получить визуализацию», мы примерим получившуюся
         подборку на твою стену и отправим результат на WhatsApp или Viber.
     </p>
-    <form action="/request" method="post">
+    <form action="/request" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <input type="text" name="firstname" class="form__input" placeholder="Введите имя" value="{{ old('firstname') }}"><br>
         @error('firstname')
@@ -18,8 +18,9 @@
         @error('phone')
             <div class="alert-danger">{{ $message }}</div>
         @enderror
+        <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
         <label class="form__file">
-            <input type="file" name="file">
+            <input type="file" name="file" accept="image/*">
             <span>Выберите файл</span>
         </label><br>
         <input type="submit" value="Получить визуализацию" class="form__button">
